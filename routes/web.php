@@ -8,6 +8,11 @@ use App\Livewire\ProductDetailsComponent;
 use App\Livewire\RegisterComponent;
 use App\Livewire\Admin\AdminDashboardComponent;
 use App\Livewire\ShopComponent;
+//use App\Http\Livewire\ShopComponent;
+
+Route::get('/shop', ShopComponent::class)->name('shop');
+
+
 use App\Livewire\User\UserDashboardComponent;
 use App\Livewire\ParentComponent;
 use Illuminate\Support\Facades\Route;
@@ -28,7 +33,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('userDashboard');
 });
 
-Route::get('/shop', ShopComponent::class)->name('shop');
+//Route::get('/shop', ShopComponent::class)->name('shop');
 Route::get('/checkout', CheckoutComponent::class)->name('checkout');
 Route::get('/cart', CartComponent::class)->name('cart');
 Route::get('/details/{slug}', ProductDetailsComponent::class)->name('details');

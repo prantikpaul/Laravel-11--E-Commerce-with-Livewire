@@ -16,6 +16,8 @@ class SidebarComponent extends Component
         // show new added product to shop page
 
         $latestProduct = Product::latest()->take(3)->get();
+
         return view('livewire.sidebar-component',compact('latestProduct','categories'));
     }
+
 }
