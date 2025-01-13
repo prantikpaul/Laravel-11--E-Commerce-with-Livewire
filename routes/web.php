@@ -31,5 +31,5 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/shop', ShopComponent::class)->name('shop');
 Route::get('/checkout', CheckoutComponent::class)->name('checkout');
 Route::get('/cart', CartComponent::class)->name('cart');
-Route::get('/details', ProductDetailsComponent::class)->name('details');
+Route::get('/details/{slug}', ProductDetailsComponent::class)->name('details');
 
