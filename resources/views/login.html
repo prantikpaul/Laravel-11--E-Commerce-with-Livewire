@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
 <title>Surfside Media</title>
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="description" content="">
@@ -11,10 +11,10 @@
 <meta property="og:type" content="">
 <meta property="og:url" content="">
 <meta property="og:image" content="">
-<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/theme/favicon.ico') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}"></head>
-@livewireStyles
+<link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.ico">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/custom.css"></head>
+
 <body>
     <header class="header-area header-style-1 header-height-2">
         <div class="header-top header-top-ptb-1 d-none d-lg-block">
@@ -24,13 +24,13 @@
                         <div class="header-info">
                         <ul>
                                 <li>
-                                    <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English </a>
-{{--                                    <ul class="language-dropdown">--}}
-{{--                                        <li><a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="">Français</a></li>--}}
-{{--                                        <li><a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="">Deutsch</a></li>--}}
-{{--                                        <li><a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>--}}
-{{--                                    </ul>--}}
-                                </li>
+                                    <a class="language-dropdown-active" href="#"> <i class="fi-rs-world"></i> English <i class="fi-rs-angle-small-down"></i></a>
+                                    <ul class="language-dropdown">
+                                        <li><a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="">Français</a></li>
+                                        <li><a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="">Deutsch</a></li>
+                                        <li><a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="">Pусский</a></li>
+                                    </ul>
+                                </li>                                
                             </ul>
                         </div>
                     </div>
@@ -47,54 +47,76 @@
                     </div>
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
-                            <ul>
-                                @auth()
-{{--                                    <li><i class="fi-rs-key"> {{auth()->user()->name}} </i>--}}
-{{--                                    <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>--}}
-{{--                                    <form method="POST" action="{{ route('logout') }}">--}}
-{{--                                        @csrf--}}
-{{--                                        <a href="{{ route('logout') }}"--}}
-{{--                                           onclick="event.preventDefault(); this.closest('form').submit();">--}}
-{{--                                            {{ __('Log Out') }}--}}
-{{--                                        </a>--}}
-{{--                                    </form>--}}
-                                    <livewire:logout-component />
-
-                                @else
-                                <li><i class="fi-rs-key"></i><a href="{{route('login')}}">Log In </a>  / <a href="{{route('registerView')}}">Sign Up</a></li>
-
-                                @endauth
-
-
-
-
+                            <ul>                                
+                                <li><i class="fi-rs-key"></i><a href="login.html">Log In </a>  / <a href="register.html">Sign Up</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            <div class="container">
         <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+            <div class="container">
                 <div class="header-wrap">
                     <div class="logo logo-width-1">
-                        <a href="{{route('home')}}"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="assets/imgs/logo/logo.png" alt="logo"></a>
                     </div>
                     <div class="header-right">
                         <div class="search-style-1">
-                            <form action="#">
+                            <form action="#">                                
                                 <input type="text" placeholder="Search for items...">
                             </form>
                         </div>
                         <div class="header-action-right">
-{{--                            @livewire('carticon-component')--}}
                             <div class="header-action-2">
                                 <div class="header-action-icon-2">
-                                    @livewire('wishicon-component')
+                                    <a href="shop-wishlist.php">
+                                        <img class="svgInject" alt="Surfside Media" src="assets/imgs/theme/icons/icon-heart.svg">
+                                        <span class="pro-count blue">4</span>
+                                    </a>
                                 </div>
                                 <div class="header-action-icon-2">
-
-                                    @livewire('carticon-component')
+                                    <a class="mini-cart-icon" href="cart.html">
+                                        <img alt="Surfside Media" src="assets/imgs/theme/icons/icon-cart.svg">
+                                        <span class="pro-count blue">2</span>
+                                    </a>
+                                    <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                        <ul>
+                                            <li>
+                                                <div class="shopping-cart-img">
+                                                    <a href="product-details.html"><img alt="Surfside Media" src="assets/imgs/shop/thumbnail-3.jpg"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="product-details.html">Daisy Casual Bag</a></h4>
+                                                    <h4><span>1 × </span>$800.00</h4>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="shopping-cart-img">
+                                                    <a href="product-details.html"><img alt="Surfside Media" src="assets/imgs/shop/thumbnail-2.jpg"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h4><a href="product-details.html">Corduroy Shirts</a></h4>
+                                                    <h4><span>1 × </span>$3200.00</h4>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="shopping-cart-footer">
+                                            <div class="shopping-cart-total">
+                                                <h4>Total <span>$4000.00</span></h4>
+                                            </div>
+                                            <div class="shopping-cart-button">
+                                                <a href="cart.html" class="outline">View cart</a>
+                                                <a href="checkout.html">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -290,46 +312,81 @@
                                 <div class="more_categories">Show more...</div>
                             </div>
                         </div>
-
                         <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
                             <nav>
                                 <ul>
-                                    <li><a class="active" href="{{route('home')}}" wire:navigate >Home </a></li>
+                                    <li><a class="active" href="index.html">Home </a></li>
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="{{route('shop')}}" wire:navigate   >Shop</a></li>
-
-                                    <li><a href="blog.html">Blog </a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>
+                                        <ul class="mega-menu">
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="#">Women's Fashion</a>
+                                                <ul>
+                                                    <li><a href="product-details.html">Dresses</a></li>
+                                                    <li><a href="product-details.html">Blouses & Shirts</a></li>
+                                                    <li><a href="product-details.html">Hoodies & Sweatshirts</a></li>
+                                                    <li><a href="product-details.html">Wedding Dresses</a></li>
+                                                    <li><a href="product-details.html">Prom Dresses</a></li>
+                                                    <li><a href="product-details.html">Cosplay Costumes</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="#">Men's Fashion</a>
+                                                <ul>
+                                                    <li><a href="product-details.html">Jackets</a></li>
+                                                    <li><a href="product-details.html">Casual Faux Leather</a></li>
+                                                    <li><a href="product-details.html">Genuine Leather</a></li>
+                                                    <li><a href="product-details.html">Casual Pants</a></li>
+                                                    <li><a href="product-details.html">Sweatpants</a></li>
+                                                    <li><a href="product-details.html">Harem Pants</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-22">
+                                                <a class="menu-title" href="#">Technology</a>
+                                                <ul>
+                                                    <li><a href="product-details.html">Gaming Laptops</a></li>
+                                                    <li><a href="product-details.html">Ultraslim Laptops</a></li>
+                                                    <li><a href="product-details.html">Tablets</a></li>
+                                                    <li><a href="product-details.html">Laptop Accessories</a></li>
+                                                    <li><a href="product-details.html">Tablet Accessories</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="sub-mega-menu sub-mega-menu-width-34">
+                                                <div class="menu-banner-wrap">
+                                                    <a href="product-details.html"><img src="assets/imgs/banner/menu-banner.jpg" alt="Surfside Media"></a>
+                                                    <div class="menu-banner-content">
+                                                        <h4>Hot deals</h4>
+                                                        <h3>Don't miss<br> Trending</h3>
+                                                        <div class="menu-banner-price">
+                                                            <span class="new-price text-success">Save to 50%</span>
+                                                        </div>
+                                                        <div class="menu-banner-btn">
+                                                            <a href="product-details.html">Shop now</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="menu-banner-discount">
+                                                        <h3>
+                                                            <span>35%</span>
+                                                            off
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Blog </a></li>                                    
                                     <li><a href="contact.html">Contact</a></li>
-
-                                        @auth()
-                                            @if(Auth::user()->role=='admin')
                                     <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="{{route('adminDashboard')}}" wire:navigate >Admin Dashboard</a></li>
-                                                    <li><a href="#">Products</a></li>
-                                                    <li><a href="#">Categories</a></li>
-                                                    <li><a href="#">Coupons</a></li>
-                                                    <li><a href="#">Orders</a></li>
-                                                    <li><a href="#">Customers</a></li>
-{{--                                                    <li><a href="#">Logout</a></li>--}}
-                                                </ul>
-                                            @else
-                                            <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="{{route('userDashboard')}}" wire:navigate >Dashboard</a></li>
-
-                                                    <li><a href="#">Orders</a></li>
-
-{{--                                                    <li><a href="#">Logout</a></li>--}}
-                                                </ul>
-
-                                            @endif
-
-                                        @else
-                                        <li><a href="{{route('login')}}">My Account</a>
-
-                                        @endauth
-
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Dashboard</a></li>
+                                            <li><a href="#">Products</a></li>
+                                            <li><a href="#">Categories</a></li>
+                                            <li><a href="#">Coupons</a></li>
+                                            <li><a href="#">Orders</a></li>
+                                            <li><a href="#">Customers</a></li>
+                                            <li><a href="#">Logout</a></li>                                            
+                                        </ul>
                                     </li>
                                 </ul>
                             </nav>
@@ -493,9 +550,9 @@
                         <a href="contact.html"> Our location </a>
                     </div>
                     <div class="single-mobile-header-info">
-                        <a href="login.html">Log In </a>
+                        <a href="login.html">Log In </a>                        
                     </div>
-                    <div class="single-mobile-header-info">
+                    <div class="single-mobile-header-info">                        
                         <a href="register.html">Sign Up</a>
                     </div>
                     <div class="single-mobile-header-info">
@@ -512,10 +569,60 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    {{ $slot }}
-
+    </div>        
+	<main class="main">
+        <div class="page-header breadcrumb-wrap">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html" rel="nofollow">Home</a>                    
+                    <span></span> Login
+                </div>
+            </div>
+        </div>
+        <section class="pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 m-auto">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="login_wrap widget-taber-content p-30 background-white border-radius-10 mb-md-5 mb-lg-0 mb-sm-5">
+                                    <div class="padding_eight_all bg-white">
+                                        <div class="heading_s1">
+                                            <h3 class="mb-30">Login</h3>
+                                        </div>
+                                        <form method="post">
+                                            <div class="form-group">
+                                                <input type="text" required="" name="email" placeholder="Your Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input required="" type="password" name="password" placeholder="Password">
+                                            </div>
+                                            <div class="login_footer form-group">
+                                                <div class="chek-form">
+                                                    <div class="custome-checkbox">
+                                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
+                                                        <label class="form-check-label" for="exampleCheckbox1"><span>Remember me</span></label>
+                                                    </div>
+                                                </div>
+                                                <a class="text-muted" href="#">Forgot password?</a>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-fill-out btn-block hover-up" name="login">Log in</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-6">
+                               <img src="assets/imgs/login.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="main">
         <section class="newsletter p-30 text-white wow fadeIn animated">
             <div class="container">
@@ -577,7 +684,7 @@
                             <li><a href="#">Delivery Information</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Contact Us</a></li>                            
                         </ul>
                     </div>
                     <div class="col-lg-2  col-md-3">
@@ -586,7 +693,7 @@
                             <li><a href="my-account.html">My Account</a></li>
                             <li><a href="#">View Cart</a></li>
                             <li><a href="#">My Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Track My Order</a></li>                            
                             <li><a href="#">Order</a></li>
                         </ul>
                     </div>
@@ -626,34 +733,31 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>    
     <!-- Vendor JS-->
-
-    <script src="{{ asset('assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/jquery-migrate-3.3.0.min.js') }}"></script>
-    <script src="{{ asset('assets/js/vendor/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/slick.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.syotimer.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/wow.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery-ui.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/perfect-scrollbar.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/magnific-popup.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/select2.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/waypoints.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/counterup.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.countdown.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/images-loaded.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/isotope.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/scrollup.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.vticker-min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.theia.sticky.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.elevatezoom.js') }}"></script>
-    <!-- Template  JS -->
-    <script src="{{ asset('assets/js/main.js?v=3.3') }}"></script>
-    <script src="{{ asset('assets/js/shop.js?v=3.3') }}"></script>
-    @livewireScripts
-
+<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/js/plugins/slick.js"></script>
+<script src="assets/js/plugins/jquery.syotimer.min.js"></script>
+<script src="assets/js/plugins/wow.js"></script>
+<script src="assets/js/plugins/jquery-ui.js"></script>
+<script src="assets/js/plugins/perfect-scrollbar.js"></script>
+<script src="assets/js/plugins/magnific-popup.js"></script>
+<script src="assets/js/plugins/select2.min.js"></script>
+<script src="assets/js/plugins/waypoints.js"></script>
+<script src="assets/js/plugins/counterup.js"></script>
+<script src="assets/js/plugins/jquery.countdown.min.js"></script>
+<script src="assets/js/plugins/images-loaded.js"></script>
+<script src="assets/js/plugins/isotope.js"></script>
+<script src="assets/js/plugins/scrollup.js"></script>
+<script src="assets/js/plugins/jquery.vticker-min.js"></script>
+<script src="assets/js/plugins/jquery.theia.sticky.js"></script>
+<script src="assets/js/plugins/jquery.elevatezoom.js"></script>
+<!-- Template  JS -->
+<script src="assets/js/main.js?v=3.3"></script>
+<script src="assets/js/shop.js?v=3.3"></script>   
 </body>
 
 </html>
